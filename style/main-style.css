@@ -1,0 +1,153 @@
+@font-face {
+    font-family: "Cairo-Regular";
+    src: url("fonts/Cairo-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Cairo-ExtraBold";
+    src: url("fonts/Cairo-ExtraBold.ttf") format("truetype");
+}
+
+html {
+    font-family: "Cairo-Regular",sans-serif;
+    /*background-image: url(Images/hero_background_widescreen_original_character.png);*/
+    background-size:cover;
+    /*force the scroll bar to appear
+    overflow-y: scroll;*/
+}
+
+body {
+    margin:0;
+    overflow: hidden;
+}
+
+.navbar {
+    display:flex;
+    justify-content: center;
+    justify-content: space-between;
+    background: blueviolet;
+    border-radius: 10px;
+    padding-top:10px;
+    /*width: 100%;
+    margin:8px;*/
+    left: 8px;
+    right: 8px;
+    width: calc(100% - 16px);
+    margin-top:8px;
+    position: fixed;
+    z-index:2;
+}
+
+.navbar a img.logo {
+    margin-top:3px;
+}
+
+
+.navbar .accountIcon {
+    width:50px;
+    height:auto;
+}
+
+
+.navbar .accountIcon:hover {
+    cursor:pointer;
+}
+
+.navbar ul .icon-ul {
+    margin: 20px;
+    padding: 10px;
+}
+
+.navbar ul {
+    display:flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin:8px;
+}
+
+
+.navbar ul.links {
+    margin-left:45px;
+
+}
+
+.navbar ul li {
+    font-size: 20px;
+    padding-top:4px;
+    margin-left:20px;
+}
+
+.navbar ul a {
+    color:white;
+    text-decoration: none;
+}
+
+.links a {
+    opacity: 0.8;
+}
+
+.navbar ul a:hover {
+    color: wheat;
+    opacity: 1;
+}
+
+.hero {
+    position: relative;
+    /*background-image: url(Images/hero_background_widescreen_original_character.png);*/
+    background-size: cover;
+    width: auto;
+    height: 570px;
+}
+
+.hero h3 {
+    font-family: 'Cairo-ExtraBold',sans-serif;
+    word-spacing: -5px;
+    position:absolute;
+    top:25%;
+    right:47%;
+    color: blueviolet;
+    font-size: 60px;
+    font-weight: bolder;
+    /*box-shadow: 0 -2px 8px 1px rgba(0,0,0,0.2);*/
+    line-height: 1.5; /*decrease the spaceing between the headings lines*/
+}
+
+.hero span {
+    padding-left:10px;
+    padding-right:10px;
+}
+
+
+.hero span:first-child {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.hero span:nth-child(2) {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.hero span:nth-child(4) {
+    font-weight: 100;
+    display:block;
+    margin-top:10px;
+    word-spacing: 0;
+    font-family: 'Cairo-Regular', sans-serif;
+    color: rgb(78, 77, 77);
+    font-size: 25px;
+}
+
+.hero span:nth-child(4) em {
+    font-style: normal;
+}
+
+.hero .character {
+    margin-top:110px;
+    margin-right:150px;
+}
+
+.hero .badges {
+    margin: 40px 0 0 0;
+}

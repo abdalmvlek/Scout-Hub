@@ -1,0 +1,150 @@
+@font-face {
+    font-family: "Cairo-Regular";
+    src: url("fonts/Cairo-Regular.ttf") format("truetype");
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Cairo-Regular', sans-serif;
+}
+
+html {
+    font-family: "Cairo-Regular",sans-serif;
+}
+
+.navbar {
+    display:flex;
+    margin:15px 0 0 0;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+
+.navbar a img.logo {
+    margin-top:5px;
+}
+
+
+.navbar .accountIcon {
+    width:50px;
+    height:auto;
+}
+
+
+.navbar .accountIcon:hover {
+    cursor:pointer;
+}
+
+.navbar ul {
+    display:flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin:10px;
+}
+
+.navbar ul.links {
+    margin-left:45px;
+}
+
+.navbar ul li {
+    font-size: 20px;
+    padding-top:4px;
+    margin-left:20px;
+}
+
+.navbar ul a {
+    color:#333333;
+    text-decoration: none;    
+}
+
+.links a {
+    opacity: 0.6;
+}
+
+.navbar ul a:hover {
+    color: blueviolet;
+    opacity: 1;
+}
+
+.no-memebers-text {
+    font-weight: 300;
+    text-align: center;
+    color: #838282;
+    margin-top:5%;
+    font-size:25px;
+}
+
+
+.memebers-header-div {
+    width: 100%;
+}
+
+.memebers-header {
+    margin: 0 100px 0 0;
+    text-align: right;
+    font-size: 20px;
+}
+
+.memebers-header .main-header,.page-header {
+    color: #838282;
+    font-weight: 400;
+}
+
+.memebers-header .page2-header {
+    color: black;
+    font-weight: 500;
+}
+
+
+.memebers-header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.memebers-header a:hover {
+    color: #5f5e5e;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    color: blueviolet;
+}
+
+.branch-header h1 {
+    margin-bottom: 0;
+}
+
+.title-header h3 {
+    margin-top: 0;
+}
+
+div.title-header {
+    display: flex;
+    justify-content: space-between;
+    white-space: no-wrap;
+    margin:0 100px;
+}
+
+table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: blueviolet;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(138, 43, 226, 0.1); /* blueviolet with low opacity */
+}

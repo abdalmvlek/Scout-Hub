@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "Cairo-Regular";
+    src: url("fonts/Cairo-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Cairo-ExtraBold";
+    src: url("fonts/Cairo-ExtraBold.ttf") format("truetype");
+}
+
+html {
+    font-family: "Cairo-Regular",sans-serif;
+    /*background-image: url(Images/Background_image.jpg);*/
+    background-size: cover;
+}
+
+.navbar {
+    display : flex;
+    margin-top: 15px;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin : 10px 10px 10px -6px;
+}
+
+.navbar a img {
+    margin-top: 5px;
+}
+
+
+.navbar ul li {
+    font-size: 20px;
+    margin-left: 20px;
+    padding: 10;
+}
+
+a {
+    text-decoration: none;
+    color: blueviolet;
+}
+
+
+.login {
+    background: blueviolet;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 5px; /*original value was 20px */
+}
+
+.hero {
+    position: relative;
+    /*background-image: url(Images/hero_background_widescreen_original_character.png);*/
+    background-size: cover;
+    width: auto;
+    height: 570px;
+}
+
+.hero h3 {
+    margin-right: 30px;
+    font-family: 'Cairo-ExtraBold',sans-serif;
+    word-spacing: -5px;
+    position:absolute;
+    top: 30%;
+    /*top:25%;*/
+    right:47%;
+    color: blueviolet;
+    font-size: 45px;
+    font-weight: bolder;
+    /*box-shadow: 0 -2px 8px 1px rgba(0,0,0,0.2);*/
+    line-height: 1.5; /*decrease the spaceing between the headings lines*/
+}
+
+.hero span {
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.hero img {
+    margin-top: 120px;
+    /*margin-top:70px;*/
+    margin-right:45px;
+}
+
+
+.hero span:first-child {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.hero span:nth-child(2) {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.hero span:last-child {
+    font-weight: 100;
+    display:block;
+    margin-top:10px;
+    word-spacing: 0;
+    font-family: 'Cairo-Regular', sans-serif;
+    color: rgb(78, 77, 77);
+    font-size: 25px;
+}

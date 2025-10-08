@@ -1,0 +1,201 @@
+@font-face {
+    font-family: "Cairo-Regular";
+    src: url("fonts/Cairo-Regular.ttf") format("truetype");
+}
+
+.navbar {
+    font-family: "Cairo-Regular", sans-serif;
+    display : flex;
+    margin-top: 15px;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.navbar a img {
+    margin-top: 5px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Cairo-Regular', sans-serif;
+}
+
+.reg-h1 {
+    margin:0 0 15px 0;
+}
+
+.wrapper {
+    display: block;
+    width: 420px;
+    color: #333333;
+    margin:auto;
+}
+
+html body #login-wrapper {
+    margin-top:6%;
+}
+
+.wrapper h1 {
+    font-size: 35px;
+    text-align:center;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border:#33333348 solid 2px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    border:none;
+    outline:none;
+    font-size: 16px;
+    padding: 20px 45px 20px 15px;
+}
+
+.input-box:last-child {
+    margin-bottom: 10px;
+}
+
+/*Style for the select list*/
+
+
+
+.input-box select {
+    width: 97%;
+    height: 100%;
+    border:none;
+    outline:none;
+    font-size: 16px;
+    padding-right:50px;
+    padding-left: 30px;
+    opacity: 0.6;
+    /* appearance: none;  hide the arrow */
+}
+
+
+.input-box svg {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    fill:#333333;
+    opacity: 0.9;
+}
+
+.input-box g {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    fill:#333333;
+    opacity: 0.9;
+}
+
+.input-box svg image {
+    fill:#333333;
+}
+
+.step {
+    display:none;
+}
+
+.step.active { 
+    display:block;
+}
+
+.rings {
+    display:none;
+}
+
+.ring-active {
+    display:block;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background: blueviolet;
+    border: none;
+    border-radius: 5px;
+    margin-top:10px;
+}
+
+.wrapper .btn:hover {
+    background: rgb(133, 29, 231);
+    color: rgb(231, 224, 211);
+    cursor: pointer;
+}
+
+.wrapper .back-btn {
+    width: 100%;
+    height: 45px;
+    color:blueviolet;
+    font-size: 16px;
+    font-weight: bold;
+    /*background: rgb(231, 231, 231);*/
+    box-shadow: .35em .45em 1em rgba(50,50,50,0.2);
+    background:white;
+    border-color: blueviolet;
+    border-radius: 5px;
+    border:none;
+    /*border-width: 0.3px;*/
+    margin-top:10px;
+    display:none;
+}
+
+.wrapper .back-btn:hover {
+    background:rgb(251, 249, 249);
+    color:blueviolet;
+    cursor:pointer;
+}
+
+/*
+.header {
+    display:flex;
+}
+
+
+*/
+
+.register p {
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#error a {
+    color: blueviolet;
+    opacity: 0.7;
+}
+
+#error a:hover {
+    color : #333333;
+}
+
+.register p a {
+    color: blueviolet;
+    opacity: 0.7;
+}
+
+.register p a:hover {
+    color : #333333;
+}
+
+#submit {
+    display:none;
+}
+
+#error {
+    display:inline;
+    color:red;
+}

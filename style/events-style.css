@@ -1,0 +1,680 @@
+@font-face {
+    font-family: "Cairo-Regular";
+    src: url("fonts/Cairo-Regular.ttf") format("truetype");
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Cairo-Regular', sans-serif;
+}
+
+html {
+    font-family: "Cairo-Regular",sans-serif;
+}
+
+.navbar {
+    display:flex;
+    margin:15px 0 0 0;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+
+.navbar a img.logo {
+    margin-top:5px;
+}
+
+
+.navbar .accountIcon {
+    width:50px;
+    height:auto;
+}
+
+
+.navbar .accountIcon:hover {
+    cursor:pointer;
+}
+
+.navbar ul {
+    display:flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin:10px;
+}
+
+.navbar ul.links {
+    margin-left:45px;
+}
+
+.navbar ul li {
+    font-size: 20px;
+    padding-top:4px;
+    margin-left:20px;
+}
+
+.navbar ul a {
+    color:#333333;
+    text-decoration: none;    
+}
+
+.links a {
+    opacity: 0.6;
+}
+
+.navbar ul a:hover {
+    color: blueviolet;
+    opacity: 1;
+}
+
+.pop-up-create {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    z-index:-1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pop-up-create.active {
+    opacity: 1;
+    z-index:999;
+}
+
+.pop-up-edit {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    z-index:-1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pop-up-edit.active {
+    opacity: 1;
+    z-index:999;
+}
+
+.wrapper {
+    /*display: none;*/
+    width: 420px;
+    color: #838282;
+    /*margin:auto;*/
+    /*background:#f8f8f8;*/
+    background: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    padding:2px 20px 20px 0;
+    border-radius:5px;
+    margin:auto;
+}
+
+.wrapper h3 {
+    font-size: 35px;
+    text-align:center;
+    color:blueviolet;
+    margin-top:15px;
+    margin-left:20px;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 93%;
+    height: 50px;
+    border-radius: 5px;
+    border-bottom:#33333348 solid 2px;
+    margin: 0  0 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    border:none;
+    outline:none;
+    /*background:#f8f8f8;*/
+    background: white;
+    font-size: 16px;
+    padding: 20px 2px 20px 15px;
+}
+
+
+.text-area textarea {
+    width: 100%;
+    height: 100%;
+    border:none;
+    outline:none;
+    /*background:#f8f8f8;*/
+    background: white;
+    font-size: 16px;
+    padding: 20px 2px 20px 15px;
+    resize: none;
+    /*overflow: hidden;*/
+}
+
+.wrapper .text-area {   
+    position: relative;
+    width: 93%;
+    height: 100px;
+    border-radius: 5px;
+    border-bottom:#33333348 solid 2px;
+    margin: 0  0 30px 0;
+}
+
+.wrapper .date-field {
+    position: relative;
+    width: 89%;
+    height: 50px;
+    border-radius: 5px;
+    border-bottom:#33333348 solid 2px;
+    margin: 0  0 30px 0;
+}
+
+.date-field input {
+    width: 100%;
+    height: 100%;
+    border:none;
+    outline:none;
+    /*background:#f8f8f8;*/
+    background: white;
+    font-size: 16px;
+    padding: 20px 2px 20px 15px;
+}
+
+.date-and-file  {
+    display:flex;
+    gap:20px;
+}
+
+.date-group {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.file-group {
+    display: flex;
+    /*flex-direction: column;*/
+    padding-top:50px;
+    margin-right: 70px;
+}
+
+.file-group label {
+    margin-left:5px;
+    padding-bottom: 9px;
+    cursor: pointer;
+}
+
+.file-caption {
+    display:none;
+}
+
+.file-caption.active {
+    display:block;
+}
+
+
+.upload-photo {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.upload-photo img {
+    /*border-bottom: #33333348 2px solid;*/
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    color: blueviolet;
+}
+
+.wrapper .create-btn {
+    width: 20%;
+    height: 45px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background: blueviolet;
+    border: none;
+    border-radius: 5px;
+    margin-top:10px;
+}
+
+.wrapper .create-btn:hover {
+    background: rgb(133, 29, 231);
+    color: rgb(231, 224, 211);
+    cursor: pointer;
+}
+
+.wrapper .edit-btn {
+    width: 20%;
+    height: 45px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background: blueviolet;
+    border: none;
+    border-radius: 5px;
+    margin-top:10px;
+}
+
+.wrapper .edit-btn:hover {
+    background: rgb(133, 29, 231);
+    color: rgb(231, 224, 211);
+    cursor: pointer;
+}
+
+.wrapper .cancel-btn {
+    width: 20%;
+    height: 45px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background: #ccc ;
+    border: none;
+    border-radius: 5px;
+    margin-top:10px;
+}
+
+.wrapper .cancel-btn:hover {
+    color: white;
+    background:#d2d0d0;
+    cursor: pointer;
+}
+
+
+
+.wrapper .buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    direction: ltr;
+    margin-left:28px;
+}
+
+.new-event-div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+#new-event-btn {
+    text-align: right;
+    padding: 7px 20px 7px 200px;
+    border: none;
+    border-radius: 17px;
+    color: #818080;
+    font-size: 20px;
+    cursor: text;
+    width: 425px;
+}
+
+.container {
+    justify-content: center;
+    display : flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin: 5px 20px 20px 20px;
+}
+
+.event-container {
+    position: relative;
+    width:350px;
+    height:fit-content;
+    background: #ebe9e9;
+    border-radius: 5px;
+    box-shadow: 0 -2px 8px 1px rgba(0,0,0,0.2);
+    /*scale animation*/
+    transform: scale(0.95);
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.event-container:hover {
+    transform:  scale(1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+
+/*event menu btn*/
+.event-container svg {
+    position: absolute;
+    z-index:2;
+    width:20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top:6px;
+    /*prevent the event image from beign selected*/
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.event-container svg:hover {
+    cursor: pointer;
+}
+
+.event-container p.start-date {
+    color: #818080;
+}
+
+/*event menu*/
+.event-menu {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    padding: 5px 0;
+    width:100px;
+    display: none;
+    /*z-index:10;*/
+}
+
+/*draw a samll tringle that at the three dots*/
+.event-menu::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #ccc transparent;
+}
+
+.event-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.event-menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+    text-align: right;
+}
+
+.event-menu li:hover {
+    background: #eee;
+}
+
+.event-menu li a {
+    text-decoration: none;
+    color: black;
+}
+.event-container img {
+    border-radius: 5px;
+}
+
+.event-container .event-text {
+    padding:0 10px 0 10px;
+    margin-bottom: 10px;
+}
+
+.event-container .event-text > * {
+    margin:0;
+}
+
+.event-description {
+    overflow: hidden; /*hide any text that would go beyoned the conatiner*/
+    display: -webkit-box;
+    -webkit-line-clamp:4; /*limits the text to only 4 lines */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis; /* adds ... when the text cuts off */
+    transition: all 0.3s ease; /* make a smoth transtion */
+}
+
+.event-description.expanded {
+    -webkit-line-clamp: unset; /* unset the 4 lines limit */
+    max-height: none;
+}
+
+.read-more {
+    display: inline-block;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.read-more {
+    color:blueviolet;
+    opacity: 0.7;
+}
+
+.read-more:hover {
+    color: #333333;
+}
+
+#error, #error1 {
+    display:none;
+    color:red;
+}
+
+.no-events-text {
+    color:blueviolet;
+    margin-top:15%;
+    font-size:25px;
+}
+
+#event-register-btn {
+    justify-content: center;
+    width: 100%;
+    margin-top:5px;
+    display:flex;
+    font-weight: bold;
+    direction:ltr;
+    color: white;
+    background: blueviolet;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;
+    /*margin-inline-end: auto;
+    margin-inline-start: 5px;*/
+}
+
+#event-register-btn:hover {
+    cursor: pointer;
+    background:rgb(154, 60, 243);
+}
+
+#event-show-registers {
+    justify-content: center;
+    width: 100%;
+    margin-top:5px;
+    display:flex;
+    font-weight: bold;
+    direction:ltr;
+    color: white;
+    background: blueviolet;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;
+    /*margin-inline-end: auto;
+    margin-inline-start: 5px;*/
+}
+
+#event-show-registers:hover {
+    cursor: pointer;
+    background:rgb(154, 60, 243);
+}
+
+#cancel-register-btn {
+    display:flex;
+    direction: ltr;
+    margin-inline-end: auto;
+    background: transparent;
+    border: none;
+    color: red;
+}
+
+#cancel-register-btn:hover {
+    cursor: pointer;
+}
+
+.green-check-mark {
+    margin-right: 10px;
+    margin-top: 2px;
+}
+
+
+#conf-reg {
+    background:blueviolet;
+    margin-right: 2px;
+}
+
+#conf-reg:hover {
+    color: rgb(239, 238, 238);
+    background: rgb(133, 29, 231);
+    cursor: pointer;
+}
+
+#cancel-reg {
+    background:#ccc;
+    margin-left: 2px;
+}
+
+#cancel-reg:hover {
+    color: rgb(243, 243, 243);
+    background:#d2d0d0;
+    cursor: pointer;
+}
+
+
+
+
+#yes-cancel-reg {
+    background:blueviolet;
+    margin-right: 2px;
+}
+
+#yes-cancel-reg:hover {
+    color: rgb(239, 238, 238);
+    background: rgb(133, 29, 231);
+    cursor: pointer;
+}
+
+#no-cancel-reg {
+    display: inline-block;
+    width: 45px;
+    background:#ccc;
+    margin-left: 2px;
+}
+
+#no-cancel-reg:hover {
+    color: rgb(243, 243, 243);
+    background:#d2d0d0;
+    cursor: pointer;
+}
+
+
+.pop-up {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    z-index:-1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pop-up.active {
+    opacity: 1;
+    z-index: 999;
+}
+
+.pop-up-inner {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    padding: 20px 0;
+    text-align: center;
+    width: 380px;
+}
+
+.pop-up-inner p {
+    margin-bottom: 20px;
+    margin-top:0;
+}
+
+
+
+.conf-btns {
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+#conf-delete {
+    background:blueviolet;
+    margin-right: 2px;
+}
+
+#conf-delete:hover {
+    color: rgb(239, 238, 238);
+    background: rgb(133, 29, 231);
+    cursor: pointer;
+}
+
+#cancel-delete {
+    background:#ccc;
+    margin-left: 2px;
+}
+
+#cancel-delete:hover {
+    color: rgb(243, 243, 243);
+    background:#d2d0d0;
+    cursor: pointer;
+}
+
+.event-header-div {
+    width: 100%;
+}
+
+.event-header {
+    margin: 0 100px 0 0;
+    text-align: right;
+    font-size: 20px;
+}
+
+.event-header .main-header {
+    color: #838282;
+    font-weight: 400;
+}
+
+.event-header .page-header {
+    color: black;
+    font-weight: 500;
+}
+
+
+.event-header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.event-header a:hover {
+    color: #5f5e5e;
+}
