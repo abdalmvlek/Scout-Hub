@@ -21,4 +21,4 @@ This platform enables Scouts to efficiently organize and manage their events and
     - Volunteer Work (View, Register, Cancel registration)
 
 # DB Diagram
-![DB Diagram](Images/DbDiagram.png)
+![DB Diagram](Images/DbDigram.png)
