@@ -12,7 +12,7 @@ This platform enables Scouts to efficiently organize and manage their events and
     - Announcements (View, Create, Update, Delete)
     - Event (View, Create, Update, Delete)
     - Volunteer Work (View, Create, Update, Delete)
-    - Show Memebers Registered (Events, Volunteer Works)
+    - Show Members Registered (Events, Volunteer Works)
 - Member
     - Log-in
     - Sign-up
@@ -21,4 +21,4 @@ This platform enables Scouts to efficiently organize and manage their events and
     - Volunteer Work (View, Register, Cancel registration)
 
 # DB Diagram
-![DB Diagram](https://ibb.co/gZGSsQS7)
+![DB Diagram](https://i.ibb.co/DfN93m9b/Group-1-1.png)
