@@ -24,6 +24,7 @@ This platform enables Scouts to efficiently organize and manage their events and
 ![Main Page](Images/IndexPage.png)
 ![Login Page](Images/LoginPage.png)
 ![Home Page](Images/MainPage.png)
+![Home Women Page](Images/MainPageWomen.png)
 ![Events Page](Images/EventsPageTwo.png)
 ![Registered Page](Images/RegisteredPage.png)
 ![Volunteer Page](Images/VolunteerPage.png)
